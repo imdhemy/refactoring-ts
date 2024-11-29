@@ -1,5 +1,5 @@
-import invoices from "./invoices.json";
-import plays from "./plays.json";
-import statement from "./statement";
+import invoices from './invoices.json';
+import plays from './plays.json';
+import { textStatement } from './textStatement';
 
-console.log(statement(invoices[0], plays));
+console.log(textStatement(invoices[0], plays));

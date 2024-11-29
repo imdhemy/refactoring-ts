@@ -6,7 +6,7 @@ const format = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 2
 }).format;
 
-function statement(invoice: any, plays: any) {
+export function textStatement(invoice: any, plays: any) {
     const statementData = calculate(invoice, plays);
 
     let result = `Statement for ${statementData.customer}\n`;
@@ -19,4 +19,10 @@ function statement(invoice: any, plays: any) {
     return result;
 }
 
-export default statement;
+export function htmlStatement(invoice: any, plays: any): string {
+    const statementData = calculate(invoice, plays);
+
+    return `<div>
+<p><strong>Statement for:</strong> ${statementData.customer}</p>
+</div>`;
+}
