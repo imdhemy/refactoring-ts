@@ -11,7 +11,7 @@ export function textStatement(invoice: any, plays: any) {
 
     let result = `Statement for ${statementData.customer}\n`;
     for (let performanceStatement of statementData.performanceStatementList) {
-        result += `  ${performanceStatement.perf.play.name}: ${format(performanceStatement.amount / 100)} (${performanceStatement.perf.audience} seats)\n`;
+        result += `  ${performanceStatement.perf.name}: ${format(performanceStatement.amount / 100)} (${performanceStatement.perf.audience} seats)\n`;
     }
 
     result += `Amount owed is ${format(statementData.totalAmount / 100)}\n`;

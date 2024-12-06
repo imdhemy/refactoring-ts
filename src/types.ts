@@ -10,3 +10,9 @@ export type StatementData = {
     totalAmount: number;
     totalVolumeCredits: number;
 };
+
+export type Performance = {
+    type: string;
+    name: string;
+    audience: number;
+} & any;
